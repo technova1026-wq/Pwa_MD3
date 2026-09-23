@@ -1,0 +1,79 @@
+@view-transition {
+ navigation: auto;
+}
+
+md-app-bar {
+ view-transition-name: encabezado;
+ background-color: var(--md-sys-color-surface);
+ contain: layout;
+}
+
+section {
+ view-transition-name: contenido;
+ background-color: var(--md-sys-color-background);
+ contain: layout;
+}
+
+@keyframes salePorLaIzquierda {
+ from {
+  transform: translateX(0);
+  opacity: 1;
+ }
+
+ to {
+  transform: translateX(-100%);
+  opacity: 1;
+ }
+}
+
+@keyframes entraPorLaDerecha {
+ from {
+  transform: translateX(100%);
+  opacity: 1;
+ }
+
+ to {
+  transform: translateX(0);
+  opacity: 1;
+ }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+ animation: none;
+ mix-blend-mode: normal;
+ opacity: 1 !important;
+}
+
+::view-transition-group(encabezado) {
+ background-color: var(--md-sys-color-surface) !important;
+}
+
+::view-transition-group(contenido) {
+ background-color: var(--md-sys-color-background) !important;
+}
+
+::view-transition-group(encabezado),
+::view-transition-group(contenido) {
+ animation-duration: var(--md-sys-motion-duration-1000);
+ mix-blend-mode: normal !important;
+ opacity: 1 !important;
+ animation-fill-mode: both;
+ overflow: hidden;
+}
+
+html::view-transition-old(encabezado) {
+ animation-name: salePorLaIzquierda;
+}
+
+html::view-transition-new(encabezado) {
+ animation-name: entraPorLaDerecha;
+}
+
+html::view-transition-old(contenido) {
+ animation-name: salePorLaIzquierda;
+}
+
+html::view-transition-new(contenido) {
+ animation-name: entraPorLaDerecha;
+}

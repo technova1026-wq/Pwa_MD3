@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <title>PWA con Lista</title>
+
+ <!-- Resumen para los motores de búsqueda. -->
+ <meta name="description" content="Ejemplo de PWA con Material Design">
+
+ <script type="module" src="js/registraServiceWorker.js"></script>
+ <script type="module" src="libclienteweb/manejaErrores.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+
+ <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+ <meta name="theme-color" content="#fffbfe">
+
+ <!-- Ícono para la página web, que normalmente se pone en la raíz del sitio.
+  Puede ser diferente para cada página. -->
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+
+ <!-- Configuración de la PWA para Chrome, Edge y Safari.
+  Debe ponerse en todas las páginas. -->
+ <link rel="manifest" href="site.webmanifest">
+ <link rel="stylesheet" href="css/material-symbols-outlined.css">
+ <link rel="stylesheet" href="material-tokens/css/baseline.css">
+ <link rel="stylesheet" href="css/estilos.css">
+
+ <!-- Permite a los navegadores, que como Safari no soportan el estándar
+  completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas
+  las páginas. -->
+ <script src="ungap/es.js"></script>
+
+ <script type="module" src="libmde/md-app-bar.js"></script>
+ <script type="module" src="js/nav-tab-fixed.js"></script>
+
+ <link rel="stylesheet" href="libmde/md-tab.css">
+ <link rel="stylesheet" href="libmde/md-list.css">
+ <link rel="stylesheet" href="css/transicion_pestanas.css">
+
+</head>
+
+<body>
+
+ <md-app-bar class="centered" adicional="tab">
+
+  <h1>PWA con Lista</h1>
+
+ </md-app-bar>
+
+ <nav-tab-fixed id="tab"></nav-tab-fixed>
+
+ <section>
+
+  <ul class="md-list">
+
+   <li class="md-one-line">
+    <span class="headline">
+     Ciudad de México
+    </span>
+   </li>
+
+   <li class="md-one-line">
+    <span class="headline">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Laboriosam eaque unde voluptates tempore ad suscipit libero, saepe neque
+     illo amet, eos ea similique quia, maiores tenetur modi nobis expedita
+     alias!
+    </span>
+   </li>
+
+   <li class="md-one-line icon">
+    <span class="material-symbols-outlined">account_balance</span>
+    <span class="headline">
+     Atenas
+    </span>
+   </li>
+
+   <li class="md-one-line avatar">
+    <img alt="Avatar de Ana" src="img/pexels-moises-patrício-10961948.jpg">
+    <span class="headline">
+     Ana
+    </span>
+   </li>
+
+
+  </ul>
+
+  <footer>
+   <ul>
+    <li>
+     <p>
+      <small>
+       <a target="_blank" rel="noopener noreferrer"
+        href="https://www.pexels.com/es-es/foto/nina-mono-cara-sonriente-10961948/">
+        La foto de la niña es de Moises Patrício, publicada en el sitio Pexels.
+        Haz clic en este hipervínculo para más información.
+       </a>
+      </small>
+     </p>
+    </li>
+    <li>
+     <p>
+      <small>
+       <a target="_blank" rel="noopener noreferrer"
+        href="https://www.pinterest.com.mx/ludresi/">
+        La foto del Coyote de Neza es de Ludres Isan, publicada en el sitio
+        Pinterest. Haz clic en este hipervínculo para más información.
+       </a>
+      </small>
+     </p>
+    </li>
+    <li>
+     <p>
+      <small>
+       <a target="_blank" rel="noopener noreferrer"
+        href="https://www.pexels.com/es-es/foto/puente-golden-gate-san-francisco-california-3701822/">
+        La foto del puente de San Francisco es de Craig Dennis, publicada en el
+        sitio Pexels. Haz clic en este hipervínculo para más información.
+       </a>
+      </small>
+     </p>
+    </li>
+   </ul>
+  </footer>
+
+ </section>
+
+</body>
+
+</html>
