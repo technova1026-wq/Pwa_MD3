@@ -247,6 +247,11 @@
  height: var(--avatarSize);
 }
 
+.md-list .avatar img[src*="Cristian"] {
+ object-fit: contain;
+ object-position: center center;
+}
+
 .md-list .avatar label {
  display: inline-block;
  font-family: var(--md-sys-typescale-title-medium-font);
